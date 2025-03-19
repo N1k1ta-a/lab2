@@ -1,32 +1,30 @@
 import pytest
-import main
+import main  # Импортируйте ваш файл main.py
 
-def test_factorial():
+def test_is_factorial():
     assert main.factorial(0) == 1
 
     assert main.factorial(1) == 1
 
     assert main.factorial(5) == 120
 
-    assert main.factorial(10) == 3628800  
+    assert main.factorial(10) == 3628800
 
     assert main.factorial(-5) == "нету ориц факт"
 
     with pytest.raises(TypeError):
-        main.factorial(5.5)  
+        main.factorial(5.5)
 
     with pytest.raises(TypeError):
-        main.factorial("abc")  
+        main.factorial("abc")
 
     with pytest.raises(TypeError):
-        main.factorial(None)  
+        main.factorial(None)
 
     assert main.factorial(2) == 2
 
-if __name__ == "__main__":
-    pytest.main()
 
-def test_simple():
+def test_is_simple():
     assert main.simple(-1) == False
 
     assert main.simple(0) == False
@@ -37,9 +35,9 @@ def test_simple():
 
     assert main.simple(3) == True
 
-    assert main.simple(7919) == True 
+    assert main.simple(7919) == True
 
-    assert main.simple(7920) == False  
+    assert main.simple(7920) == False
 
     assert main.simple("abc") == False
 
@@ -47,10 +45,8 @@ def test_simple():
 
     assert main.simple(None) == False
 
-if __name__ == "__main__":
-    pytest.main()
 
-def test_unique_elements():
+def test_is_unique_elements():
     assert main.unique_elements([1, 2, 2, 3, 4, 4, 5]) == [1, 2, 3, 4, 5]
 
     assert main.unique_elements((1, 2, 2, 3, 4, 4, 5)) == [1, 2, 3, 4, 5]
@@ -71,5 +67,4 @@ def test_unique_elements():
 
     assert main.unique_elements([1, "1", 1.0, "1"]) == [1, "1", 1.0]
 
-if __name__ == "__main__":
-    pytest.main()
+
