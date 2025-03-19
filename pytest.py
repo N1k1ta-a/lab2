@@ -23,6 +23,8 @@ def test_factorial():
 
     assert main.factorial(2) == 2
 
+if __name__ == "__main__":
+    pytest.main()
 
 def test_simple():
     assert main.simple(-1) == False
@@ -45,8 +47,10 @@ def test_simple():
 
     assert main.simple(None) == False
 
+if __name__ == "__main__":
+    pytest.main()
 
-def test_unique_elements_list():
+def test_unique_elements():
     assert main.unique_elements([1, 2, 2, 3, 4, 4, 5]) == [1, 2, 3, 4, 5]
 
     assert main.unique_elements((1, 2, 2, 3, 4, 4, 5)) == [1, 2, 3, 4, 5]
@@ -66,3 +70,6 @@ def test_unique_elements_list():
     assert main.unique_elements([1, 1, 1, 1]) == [1]
 
     assert main.unique_elements([1, "1", 1.0, "1"]) == [1, "1", 1.0]
+
+if __name__ == "__main__":
+    pytest.main()
