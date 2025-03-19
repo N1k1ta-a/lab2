@@ -1,5 +1,5 @@
 import pytest
-import main  # Импортируйте ваш файл main.py
+import main
 
 def test_is_factorial():
     assert main.factorial(0) == 1
