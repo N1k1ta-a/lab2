@@ -10,10 +10,6 @@ def factorial(a):
     except TypeError:
         print("арг должен быть числом")
 
-print(factorial(4))
-print(factorial(-1))
-print(factorial("b"))
-
 def simple(n):
     try:
         n = int(n)
@@ -30,14 +26,6 @@ def simple(n):
         return True
     except (TypeError, ValueError):
         return False
-
-print(simple(2))
-print(simple(3))   
-print(simple(4))   
-print(simple(17)) 
-print(simple(20)) 
-print(simple("abc"))
-print(simple(2.5))
 
 
 def unique_elements(data):
