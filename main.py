@@ -34,11 +34,14 @@ def unique_elements(data):
     except TypeError:
         return "Входные данные должны быть повторяемыми"
 
-def length_of_words(word_list):
-    d = {}
-    for word in word_list:
+def length_of_words(list):
+    glossary = {}
+    for word in list:
         length = len(word)
-        if length not in d:
-            d[length] = []
-        d[length].append(word)
-    return d
+        if length not in glossary:
+            glossary[length] = []
+        glossary[length].append(word)
+    return glossary
+words = ["apple", "cat", "dog", "banana",]
+result = length_of_words(words)
+print(result)
