@@ -33,3 +33,12 @@ def unique_elements(data):
         return list(set(data))
     except TypeError:
         return "Входные данные должны быть повторяемыми"
+
+def length_of_words(word_list):
+    d = {}
+    for word in word_list:
+        length = len(word)
+        if length not in d:
+            d[length] = []
+        d[length].append(word)
+    return d
